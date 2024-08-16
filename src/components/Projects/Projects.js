@@ -28,7 +28,7 @@ function Projects() {
               isBlog={false}
               title="hannibalADS"
               description="Développement d'un tableau de bord intégré et interactif pour un système de détection, d'identification, de suivi et de
-neutralisation des drones non autorisés"
+neutralisation des drones non autorisés."
             // ghLink="https://github.com/Oumaima26/Alkhawarizmi_frontend"
             // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
