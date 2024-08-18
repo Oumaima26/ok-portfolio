@@ -13,10 +13,23 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';  // Importation de useTranslation
 
 function NavBar() {
+
+
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState('fr');
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
+  };
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+
+  const { t } = useTranslation();  // Utilisation de useTranslation
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -38,8 +51,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
-         
-          <span className="img-fluid logo" style={{color:"#CE5FF8"}}> Oumaima Kadri </span>
+          <span className="img-fluid logo" style={{ color: "#CE5FF8" }}> {t('Oumaima Kadri')}</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -55,7 +67,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t('Accueil')}
               </Nav.Link>
             </Nav.Item>
 
@@ -65,7 +77,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t('À propos')}
               </Nav.Link>
             </Nav.Item>
 
@@ -75,10 +87,7 @@ function NavBar() {
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> {t('Projets')}
               </Nav.Link>
             </Nav.Item>
 
@@ -88,10 +97,12 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t('CV')}
               </Nav.Link>
             </Nav.Item>
-
+            <Nav.Item>
+              <LanguageSwitcher language={language} setLanguage={changeLanguage} />
+            </Nav.Item>
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/Oumaima26/ok-portfolio"

@@ -8,17 +8,20 @@ import ohif from "../../Assets/Projects/ohif.png";
 import facture from "../../Assets/Projects/facture.png";
 import khawarizmi from "../../Assets/Projects/khawarizmi.png";
 import score from "../../Assets/Projects/score.png";
+import { useTranslation } from 'react-i18next';  // Importation de useTranslation
 
 function Projects() {
+  const { t } = useTranslation();  // Utilisation de useTranslation
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          <strong className="purple">Mes Travaux </strong> Récents
+          <strong className="purple">{t('Travaux')}</strong> 
         </h1>
         <p style={{ color: "white" }}>
-          Voici quelques projets sur lesquels j'ai travaillé récemment.
+           {t('Voici')}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
@@ -27,8 +30,7 @@ function Projects() {
               imgPath={hannibalADS}
               isBlog={false}
               title="hannibalADS"
-              description="Développement d'un tableau de bord intégré et interactif pour un système de détection, d'identification, de suivi et de
-neutralisation des drones non autorisés."
+              description={t('hannibalADS')}
             // ghLink="https://github.com/Oumaima26/Alkhawarizmi_frontend"
             // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
@@ -38,7 +40,7 @@ neutralisation des drones non autorisés."
               imgPath={khawarizmi}
               isBlog={false}
               title="Alkhawarizmi"
-              description="Application web de gestion d’une école primaire privée."
+              description={t('Alkhawarizmi')}
               ghLink="https://github.com/Oumaima26/Alkhawarizmi_frontend"
             // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
@@ -49,7 +51,7 @@ neutralisation des drones non autorisés."
               imgPath={medzone}
               isBlog={false}
               title="Medzone"
-              description="Application web pour le traitement d’imagerie médicale."
+              description={t('Medzone')}
               ghLink="https://github.com/Oumaima26/medzone"
             // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
             />
@@ -59,7 +61,7 @@ neutralisation des drones non autorisés."
               imgPath={ohif}
               isBlog={false}
               title="OHIF"
-              description="L'ajout de nouvelles fonctionnalités à ce site."
+              description={t('OHIF')}
               ghLink="https://github.com/OHIF/Viewers"
             />
           </Col>
@@ -69,7 +71,7 @@ neutralisation des drones non autorisés."
               imgPath={score}
               isBlog={false}
               title="Score-Bac"
-              description="Application web permet de calculer le score du bac en Tunisie."
+              description={t('Score-Bac')}
               ghLink="https://github.com/Oumaima26/scorebac"
               demoLink="https://scorebac.netlify.app/"
 
@@ -81,7 +83,7 @@ neutralisation des drones non autorisés."
               imgPath={facture}
               isBlog={false}
               title="Facture.tn"
-              description="Application web développement d’un logiciel de gestion enligne pour les PME."
+              description={t('Facture.tn')}
               ghLink="https://github.com/Oumaima26/Facture.tn"
             // demoLink="https://chatify-49.web.app/"
             />

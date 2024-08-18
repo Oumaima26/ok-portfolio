@@ -4,8 +4,10 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation(); 
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -22,7 +24,7 @@ function Home() {
 
               <h1 className="heading-name">
                 {/* I'M */}
-                <strong className="main-name"> Oumaima Kadri</strong>
+                <strong className="main-name"> {t('Oumaima Kadri')}</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>

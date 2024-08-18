@@ -1,50 +1,41 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import { useTranslation } from 'react-i18next';  // Importation de useTranslation
 
 function AboutCard() {
+  const { t } = useTranslation();  // Utilisation de useTranslation
+
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p >
-            Bonjour à tous, je suis <span className="purple">Kadri Oumaima</span> de
-            <span className="purple"> Tunis.</span>
+          {t('Bonjour')} <span className="purple">{t('Oumaima Kadri')}</span>&nbsp;{t('de')}
+            <span className="purple"> {t('Tunis')}</span>
             <br />
-            Je me spécialise dans le développement web full stack (frontend + backend) et le développement mobile.
-            J'ai obtenu une Licence Fondamentale en Informatique à l'Institut Supérieur d’Informatique de Mahdia (ISIMa) 
-            et un Master Professionnel en Génie Logiciel à l'Institut Supérieur d'Informatique et de Mathématiques de Monastir (ISIMM).
+            {t('spécialise')}
             <br />
-            J'ai eu l'opportunité de réaliser un stage de 5 mois chez YooDev-IT
-             à Sousse, où j'ai travaillé sur une application web de gestion en 
-             ligne pour PME avec le stack MERN. J'ai également effectuée un stage
-              de 8 mois pour mon projet de fin d'études de master, intitulé 
-              "Conception et développement d'une application web pour le traitement
-               d'imagerie médicale" au Laboratoire de Recherche en Technologie et 
-               Imagerie Médicale de Monastir (LabTIM).
+            {t('opportunité')}
                <br/>
-               Actuellement, en tant que chercheuse et développeuse full stack, 
-            je travaille sur le développement d'un tableau de bord intégré 
-            et interactif pour un système de détection, d'identification, 
-            de suivi et de neutralisation des drones non autorisés au Centre 
-            de Recherches Militaires de l’Aouina.
+               {t('Actuellement')}
             <br />
             <br />
-            En dehors de la programmation, voici quelques autres activités que j'adore :
+            {t('dehors')} 
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Broderie
+              <ImPointRight />{t('Broderie')} 
             </li>
             <li className="about-activity">
-              <ImPointRight /> Voyages
+              <ImPointRight />{t('Voyages')} 
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Efforcez-vous de créer des choses qui font la différence !"{" "}
+            "{t('Efforcez')}"{" "}
           </p>
-          <footer className="blockquote-footer">Oumaima</footer>
+          <footer className="blockquote-footer">{t('Oumaima Kadri')}</footer>
         </blockquote>
       </Card.Body>
     </Card>

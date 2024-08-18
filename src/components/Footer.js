@@ -5,8 +5,11 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';  // Importation de useTranslation
 
 function Footer() {
+  const { t } = useTranslation();  // Utilisation de useTranslation
+
   let date = new Date();
   let year = date.getFullYear();
   return (
@@ -14,10 +17,11 @@ function Footer() {
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>
-          Conçu et développé par Oumaima Kadri</h3>
+          {t('Conçu')}
+          </h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} Oumaima Kadri</h3>
+          <h3>{t('Copyright')} © {year} {t('Oumaima Kadri')}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">

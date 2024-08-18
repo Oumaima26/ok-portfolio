@@ -6,10 +6,13 @@ import pdf from "../../Assets/../Assets/CV__OumaimaKadri.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { useTranslation } from 'react-i18next';  // Importation de useTranslation
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const { t } = useTranslation();  // Utilisation de useTranslation
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -27,7 +30,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Télécharger CV
+            &nbsp;{t('Télécharger')}
           </Button>
         </Row>
 
@@ -48,7 +51,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Télécharger CV
+            &nbsp;{t('Télécharger')}
           </Button>
         </Row>
       </Container>

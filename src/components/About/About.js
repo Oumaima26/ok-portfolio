@@ -6,8 +6,10 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import { useTranslation } from 'react-i18next';  // Importation de useTranslation
 
 function About() {
+  const { t } = useTranslation();  // Utilisation de useTranslation
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -23,7 +25,7 @@ function About() {
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
 
-              Découvrez Qui  <strong className="purple">Je Suis</strong>
+            <strong className="purple"> {t('Découvrez')}</strong>
             </h1>
             <Aboutcard />
           </Col>
@@ -36,13 +38,13 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          <strong className="purple">Compétences </strong>Professionnelles
+          <strong className="purple"> {t('Compétences')} </strong>
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">Outils </strong> que j'utilise
+          <strong className="purple">{t('Outils')} </strong> 
         </h1>
         <Toolstack />
 

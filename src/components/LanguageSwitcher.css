@@ -1,0 +1,9 @@
+.dropdown-menu {
+  background-color: transparent; /* Fully transparent background */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+  
+  background-image: var(--image-gradient), url(../Assets/home-bg.jpg);
+ 
+}
+

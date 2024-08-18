@@ -9,48 +9,50 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 function Home2() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); 
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              <span className="purple">{t('introduce_myself')}</span>
+              LAISSEZ-MOI ME <span className="purple"> PRÉSENTER </span>
             </h1>
             <p className="home-about-body">
-              {t('fall_in_love_with_programming')}
+              Je suis tombée amoureuse de la programmation, et j'ai au moins appris
+              quelques petites choses, je crois... 🤷‍♂️
               <br />
-              <br />{t('classic_languages')}
+              <br />Je maîtrise des langages classiques comme
               <i>
-                <b className="purple"> {t('languages')} </b>
+                <b className="purple"> Java, JavaScript, et Python. </b>
               </i>
               <br />
               <br />
-              {t('domaines_interet')} &nbsp;
+              Mes domaines d'intérêt incluent la création de nouvelles &nbsp;
               <i>
-                <b className="purple">{t('web_technologies')}, </b> {t('projects')}
+                <b className="purple">technologies web et de produits, </b> ainsi
+                que des projets liés à
                 <b className="purple">
-                  &nbsp;{t('geolocation')}
+                  la géolocalisation
                 </b>
-                &nbsp;{t('et')} {" "}
+                et à {" "}
                 <b className="purple">
-                  {t('real_time_visualization')}
+                  la visualisation en temps réel.
                 </b>
               </i>
               <br />
               <br />
-              {t('apply_my_passion')}
-              <b className="purple">&nbsp;Node.js</b> {t('ainsi_que')}
+              Dès que possible, j'applique également ma passion pour le développement de produits avec
+              <b className="purple">Node.js</b> ainsi que
               <i>
                 <b className="purple">
                   {" "}
-                  {t('modern_frameworks')}
+                  des bibliothèques et frameworks JavaScript modernes
                 </b>
               </i>
-              &nbsp; {t('comme')}
+              &nbsp; comme
               <i>
-                <b className="purple"> {t('frameworks')}</b>
+                <b className="purple"> React.js, Django, et Leaflet.</b>
               </i>
             </p>
           </Col>
@@ -63,10 +65,10 @@ function Home2() {
         <Row>
           <Col md={12} className="home-about-social">
             <h1>
-              {t('find_me_on')}
+              TROUVEZ-MOI SUR
             </h1>
             <p>
-              <span className="purple">{t('with_me')}</span>
+              N'hésitez pas à me <span className="purple">contacter </span>
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
